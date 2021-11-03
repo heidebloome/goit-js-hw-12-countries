@@ -1,5 +1,5 @@
 export default {
   input: document.querySelector('.input'),
-  results: document.querySelector('.results'),
+  country: document.querySelector('.country'),
   list: document.querySelector('.countries-list'),
 };

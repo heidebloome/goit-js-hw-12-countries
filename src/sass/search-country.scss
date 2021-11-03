@@ -1,5 +1,6 @@
 body {
   font-family: 'Roboto', sans-serif;
+  background-color: black;
 
   @media screen and (max-width: 1390px) {
     color: #fff;
@@ -51,6 +52,15 @@ img {
   }
 }
 
+.wrapper {
+  width: 90%;
+  padding-top: 30px;
+
+  @media screen and (min-width: 1000px) {
+    width: 500px;
+  }
+}
+
 .countries-list {
   margin: 0;
   width: 100%;
@@ -67,30 +77,22 @@ img {
   }
 }
 
-.results {
+.country {
   font-family: inherit;
   font-size: 20px;
+
+  &__title {
+    margin-top: 0px;
+    margin-bottom: 30px;
+  }
+
+  &__info {
+    margin-top: 30px;
+    margin-bottom: 0;
+  }
+
   @media screen and (min-width: 768px) {
     font-size: 30px;
-  }
-}
-
-h1 {
-  margin-top: 0px;
-  margin-bottom: 30px;
-}
-
-p {
-  margin-top: 30px;
-  margin-bottom: 0;
-}
-
-.wrapper {
-  width: 90%;
-  padding-top: 30px;
-
-  @media screen and (min-width: 1000px) {
-    width: 500px;
   }
 }
 

@@ -8,6 +8,6 @@ refs.input.addEventListener('input', debounce(onInput, 500));
 function onInput(event) {
   const searchQuery = event.target.value;
   refs.list.innerHTML = '';
-  refs.results.innerHTML = '';
+  refs.country.innerHTML = '';
   fetchCountries(searchQuery);
 }

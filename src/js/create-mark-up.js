@@ -17,6 +17,6 @@ export function showResults(data) {
   } else if (data.length >= 2 && data.length <= 9) {
     refs.list.innerHTML = listTemplate(data);
   } else if ((data.length = 1)) {
-    refs.results.innerHTML = countryTemplate(data[0]);
+    refs.country.innerHTML = countryTemplate(data[0]);
   }
 }
