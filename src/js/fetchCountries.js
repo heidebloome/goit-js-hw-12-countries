@@ -1,12 +1,10 @@
-import { showResults, clearCurrentMarkUp } from './create-mark-up.js';
+import { showResults } from './create-mark-up.js';
 import '@pnotify/core/dist/BrightTheme.css';
 import { error } from '@pnotify/core';
 
 const BASE_URL = 'https://restcountries.com/v2';
 
 export default function fetchCountries(searchQuery) {
-  clearCurrentMarkUp();
-
   if (!searchQuery) {
     return;
   }

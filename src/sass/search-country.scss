@@ -1,25 +1,38 @@
 body {
-  background-image: url('https://cdn.pixabay.com/photo/2013/08/09/05/54/layer-170971_960_720.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
+  font-family: 'Roboto', sans-serif;
 
+  @media screen and (max-width: 1390px) {
+    color: #fff;
+  }
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.container {
   display: flex;
   flex-direction: column;
   align-items: center;
-
+  width: 100vw;
   height: 100vh;
-  font-family: 'Roboto', sans-serif;
-  font-size: 20px;
+  margin: 0;
+  padding: 50px;
+
+  background-image: url('https://cdn.pixabay.com/photo/2013/08/09/05/54/layer-170971_960_720.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .input {
-  font-size: 20px;
-  margin-top: 50px;
-  width: 500px;
+  width: 100%;
   height: 50px;
   padding-left: 20px;
 
   border-radius: 4px;
+
+  font-size: 20px;
 
   &::placeholder {
     font-size: 20px;
@@ -32,31 +45,33 @@ body {
   &:focus {
     outline: none;
   }
-}
 
-.countries-list {
-  width: 500px;
-  margin-top: 30px;
-  padding: 30px;
-  font-family: inherit;
-  font-size: 30px;
-
-  &.is-hidden {
-    display: none;
+  @media screen and (min-width: 1000px) {
+    width: 500px;
   }
 }
 
-.countries-list__item {
-  margin-bottom: 10px;
+.countries-list {
+  margin: 0;
+  width: 100%;
+
+  font-family: inherit;
+  font-size: 20px;
+
+  &__item {
+    margin-bottom: 10px;
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 30px;
+  }
 }
 
 .results {
-  margin-top: 30px;
   font-family: inherit;
-  font-size: 30px;
-
-  &.is-hidden {
-    display: none;
+  font-size: 20px;
+  @media screen and (min-width: 768px) {
+    font-size: 30px;
   }
 }
 
@@ -65,17 +80,18 @@ h1 {
   margin-bottom: 30px;
 }
 
-img {
-  display: block;
-}
-
 p {
   margin-top: 30px;
   margin-bottom: 0;
 }
 
 .wrapper {
-  width: 500px;
+  width: 90%;
+  padding-top: 30px;
+
+  @media screen and (min-width: 1000px) {
+    width: 500px;
+  }
 }
 
 .notice {

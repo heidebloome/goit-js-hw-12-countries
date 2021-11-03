@@ -1,11 +1,13 @@
 import './sass/main.scss';
 import refs from './js/refs.js';
 import fetchCountries from './js/fetchCountries';
-var debounce = require('lodash.debounce');
+import { debounce } from 'lodash';
 
-refs.input.addEventListener('input', debounce(onInput, 1000));
+refs.input.addEventListener('input', debounce(onInput, 500));
 
 function onInput(event) {
   const searchQuery = event.target.value;
+  refs.list.innerHTML = '';
+  refs.results.innerHTML = '';
   fetchCountries(searchQuery);
 }

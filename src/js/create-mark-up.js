@@ -15,33 +15,8 @@ export function showResults(data) {
       addClass: 'notice',
     });
   } else if (data.length >= 2 && data.length <= 9) {
-    listMarkUp(data);
+    refs.list.innerHTML = listTemplate(data);
   } else if ((data.length = 1)) {
-    countryMarkUp(data);
+    refs.results.innerHTML = countryTemplate(data[0]);
   }
-}
-
-export function clearCurrentMarkUp() {
-  refs.list.innerHTML = '';
-  refs.results.innerHTML = '';
-  refs.list.classList.add('is-hidden');
-  refs.results.classList.add('is-hidden');
-}
-
-function listMarkUp(data) {
-  const list = data.map(listTemplate).join('');
-
-  clearCurrentMarkUp();
-  refs.list.classList.remove('is-hidden');
-
-  refs.list.insertAdjacentHTML('beforeend', list);
-}
-
-function countryMarkUp(data) {
-  const country = data.map(countryTemplate).join('');
-
-  clearCurrentMarkUp();
-  refs.results.classList.remove('is-hidden');
-
-  refs.results.insertAdjacentHTML('beforeend', country);
 }
