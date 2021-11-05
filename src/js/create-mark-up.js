@@ -1,11 +1,11 @@
 import '@pnotify/core/dist/BrightTheme.css';
-import { info } from '@pnotify/core';
+import { info, error } from '@pnotify/core';
 import refs from './refs.js';
-import listTemplate from '../list-template.hbs';
-import countryTemplate from '../country-template.hbs';
+import listTemplate from '../templates/list-template.hbs';
+import countryTemplate from '../templates/country-template.hbs';
 
-export function showResults(data) {
-  if (data.length > 9) {
+export default function showResults(data) {
+  if (data.length > 10) {
     const myInfo = info({
       text: 'Too many matches found. Please enter a more specific query!',
       sticker: false,
@@ -14,9 +14,25 @@ export function showResults(data) {
       delay: 250,
       addClass: 'notice',
     });
-  } else if (data.length >= 2 && data.length <= 9) {
-    refs.list.innerHTML = listTemplate(data);
-  } else if ((data.length = 1)) {
-    refs.country.innerHTML = countryTemplate(data[0]);
+    return;
   }
+
+  if (data.length >= 2 && data.length <= 10) {
+    refs.list.innerHTML = listTemplate(data);
+    return;
+  }
+
+  if (data.length === 1) {
+    refs.country.innerHTML = countryTemplate(...data);
+    return;
+  }
+
+  const myError = error({
+    text: 'Please enter a valid country name!',
+    sticker: false,
+    icon: false,
+    closer: false,
+    delay: 250,
+    addClass: 'notice',
+  });
 }
