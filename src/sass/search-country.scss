@@ -1,10 +1,11 @@
 body {
   font-family: 'Roboto', sans-serif;
   background-color: black;
+  color: #fff;
 
-  @media screen and (max-width: 1390px) {
-    color: #fff;
-  }
+  // @media screen and (max-width: 1390px) {
+  //   color: #fff;
+  // }
 }
 
 img {
@@ -21,7 +22,8 @@ img {
   margin: 0;
   padding: 50px;
 
-  background-image: url('https://cdn.pixabay.com/photo/2013/08/09/05/54/layer-170971_960_720.jpg');
+  // background-image: url('https://cdn.pixabay.com/photo/2013/08/09/05/54/layer-170971_960_720.jpg');
+  background-image: url('../images/1.JPG');
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -97,6 +99,6 @@ img {
 }
 
 .notice {
-  margin-top: 50px;
+  margin-top: 80px;
   position: absolute;
 }
